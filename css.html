@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CSS Demonstration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom fs-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/image/favicon.png" alt="Logo" width="30" height="30" class="rounded me-2">
+                <span class="text-white">Portfolio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header header-css text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bolder mb-3"><i class="fab fa-css3-alt me-3"></i>CSS Styling</h1>
+            <p class="lead mb-0 mx-auto opacity-75" style="max-width: 800px;">CSS transforms a structured HTML document
+                into a visually engaging user experience. Its power lies not just in controlling fonts and colors, but
+                in its sophisticated layout capabilities like Flexbox and CSS Grid to build complex, responsive designs.
+            </p>
+        </div>
+    </header>
+
+    <main class="container my-5 pb-5">
+        <section id="grid" class="mb-5">
+            <div class="card demo-card css-theme">
+                <div class="card-header py-3 fs-4"><i class="fas fa-th me-2 text-info"></i> Live Demo: CSS Grid</div>
+                <div class="card-body p-4 bg-light">
+                    <p class="text-muted mb-4">A powerful 2-dimensional layout system. Here, a common "holy grail"
+                        layout is created with just a few lines of code.</p>
+                    <div class="demo-container">
+                        <div class="grid-container">
+                            <div class="grid-item grid-header">Header</div>
+                            <div class="grid-item grid-sidebar">Sidebar</div>
+                            <div class="grid-item grid-main d-flex align-items-center justify-content-center">Main
+                                Content</div>
+                            <div class="grid-item grid-footer">Footer</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-top p-4">
+                    <pre class="rounded"><code class="language-css">.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+    gap: 10px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="flexbox" class="mb-5">
+            <div class="card demo-card css-theme">
+                <div class="card-header py-3 fs-4"><i class="fas fa-arrows-alt-h me-2 text-info"></i> Live Demo: CSS
+                    Flexbox</div>
+                <div class="card-body p-4 bg-light">
+                    <p class="text-muted mb-4">A 1-dimensional layout system ideal for distributing space among items in
+                        a container seamlessly.</p>
+                    <div class="demo-container">
+                        <div class="flex-container">
+                            <div class="flex-item">Item 1</div>
+                            <div class="flex-item">Item 2</div>
+                            <div class="flex-item">Item 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-white border-top p-4">
+                    <pre class="rounded"><code class="language-css">.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="motion">
+            <div class="card demo-card css-theme">
+                <div class="card-header py-3 fs-4"><i class="fas fa-magic me-2 text-info"></i> Transitions & Animations
+                </div>
+                <div class="card-body p-4 bg-light">
+                    <p class="text-muted mb-4">CSS allows for smooth state changes (transitions) and complex, keyframed
+                        movements (animations).</p>
+                    <div class="demo-container row text-center gy-4 align-items-center">
+                        <div class="col-md-6 border-end">
+                            <h4 class="fw-bold text-dark">Transition on Hover</h4>
+                            <p class="text-muted small">Hover over the box below.</p>
+                            <div class="d-flex justify-content-center align-items-center py-4">
+                                <div class="transition-box">Hover Me!</div>
+                            </div>
+                            <pre class="rounded text-start mt-2"><code class="language-css">/* Transition Code */
+.transition-box {
+    transition: all 0.4s ease-in-out;
+}
+.transition-box:hover {
+    transform: scale(1.1) rotate(5deg);
+}</code></pre>
+                        </div>
+                        <div class="col-md-6">
+                            <h4 class="fw-bold text-dark">Keyframe Animation</h4>
+                            <p class="text-muted small">A continuously looping pulse effect.</p>
+                            <div class="d-flex justify-content-center align-items-center py-4">
+                                <div class="animation-box"></div>
+                            </div>
+                            <pre class="rounded text-start mt-2"><code class="language-css">/* Animation Code */
+.animation-box {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { transform: scale(0.9); }
+    50% { transform: scale(1); }
+    100% { transform: scale(0.9); }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-custom pt-5 pb-3">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            © 2026 Copyright: Udip Rawal
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

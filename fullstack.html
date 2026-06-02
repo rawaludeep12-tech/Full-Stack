@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What is Full Stack Development?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom fs-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/image/favicon.png" alt="Logo" width="30" height="30" class="rounded me-2">
+                <span class="text-white">Portfolio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="fullstack.html">Full Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header header-fullstack text-center mb-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-dark mb-4">Full-stack Development</h1>
+            <p class="fs-5 text-muted col-lg-10 mx-auto fw-light lh-lg">Full stack development is the practice of
+                engineering a complete web application, encompassing both the client-side front-end that users interact
+                with, and the server-side back-end that handles logic, data, and databases. This holistic approach means
+                I can build and manage the entire user experience, from the initial page structure with HTML to the
+                server's data processing, ensuring all parts of the technology stack communicate effectively to create a
+                functional and seamless final product.</p>
+        </div>
+    </header>
+
+    <main class="container mb-5 pb-5">
+        <div class="row g-4 justify-content-center">
+            <div class="col-lg-10">
+                <div class="card fs-card border-frontend shadow-sm p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-frontend fs-4"><i class="fas fa-desktop"></i></div>
+                        <h3 class="mb-0 fw-bold">The Front-End (Client-Side)</h3>
+                    </div>
+                    <p class="text-muted fs-5">The front-end is everything the user sees and interacts with in their
+                        browser. It's responsible for the visual presentation and the user experience.</p>
+                    <ul class="list-group list-group-flush mt-3 border-top">
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-primary me-2"></i><strong>HTML:</strong> Provides the
+                            core structure and content of the page.</li>
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-primary me-2"></i><strong>CSS:</strong> Styles the
+                            application, handling colors, fonts, and layout.</li>
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-primary me-2"></i><strong>JavaScript:</strong> Enables
+                            interactivity, dynamic updates, and complex user actions.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-10">
+                <div class="card fs-card border-backend shadow-sm p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-backend fs-4"><i class="fas fa-server"></i></div>
+                        <h3 class="mb-0 fw-bold">The Back-End (Server-Side)</h3>
+                    </div>
+                    <p class="text-muted fs-5">The back-end is the engine running behind the scenes on a server. It
+                        processes requests, executes business logic, and manages data.</p>
+                    <ul class="list-group list-group-flush mt-3 border-top">
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-success me-2"></i><strong>Node.js / Python /
+                                PHP:</strong> Server-side languages that execute application logic.</li>
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-success me-2"></i><strong>Express / Django /
+                                Laravel:</strong> Frameworks that streamline server development.</li>
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-success me-2"></i><strong>Server:</strong> The computer
+                            where the back-end code is run and served to users.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-10">
+                <div class="card fs-card border-db shadow-sm p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-db fs-4"><i class="fas fa-database"></i></div>
+                        <h3 class="mb-0 fw-bold">The Database</h3>
+                    </div>
+                    <p class="text-muted fs-5">The database is where the application's data is permanently stored,
+                        organized, and retrieved. It's crucial for any application that needs to remember information.
+                    </p>
+                    <ul class="list-group list-group-flush mt-3 border-top">
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-warning me-2"></i><strong>SQL (e.g., MySQL):</strong>
+                            Structured databases that store data in tables with predefined schemas.</li>
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-warning me-2"></i><strong>NoSQL (e.g.,
+                                MongoDB):</strong> Unstructured databases that offer more flexibility in data storage.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-10">
+                <div class="card fs-card border-api shadow-sm p-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="icon-box bg-api fs-4"><i class="fas fa-cogs"></i></div>
+                        <h3 class="mb-0 fw-bold">APIs (Application Programming Interfaces)</h3>
+                    </div>
+                    <p class="text-muted fs-5">APIs are the communication channels that allow the front-end and back-end
+                        to securely exchange information.</p>
+                    <ul class="list-group list-group-flush mt-3 border-top">
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-danger me-2"></i><strong>REST APIs:</strong> A popular
+                            architectural style for creating web services.</li>
+                        <li class="list-group-item bg-transparent border-bottom-0 py-2"><i
+                                class="fas fa-check-circle text-danger me-2"></i><strong>JSON:</strong> The standard
+                            data format used for sending information between the client and server.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-5 pt-5 text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <img src="assets/image/fullstack.png" class="img-fluid rounded-4 shadow-lg border"
+                        alt="Fullstack development image">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-custom pt-5 pb-3">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold text-white">My Portfolio</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+                    <p>A showcase of my skills in web development, demonstrating my ability to create static and dynamic
+                        applications.</p>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold text-white">Technologies</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+                    <p><a href="html.html" class="text-light text-decoration-none hover-accent">HTML</a></p>
+                    <p><a href="css.html" class="text-light text-decoration-none hover-accent">CSS</a></p>
+                    <p><a href="javascript.html" class="text-light text-decoration-none hover-accent">JavaScript</a></p>
+                    <p><a href="bootstrap.html" class="text-light text-decoration-none hover-accent">Bootstrap</a></p>
+                </div>
+                <div class="col-md-3 mx-auto mb-4">
+                    <h6 class="text-uppercase fw-bold text-white">Social Media</h6>
+                    <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" />
+                    <div class="d-flex justify-content-center justify-content-md-start fs-4">
+                        <a href="#" class="text-light me-4 text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-4 text-decoration-none"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-4 text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-light text-decoration-none"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            © 2026 Copyright: Udip Rawal
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

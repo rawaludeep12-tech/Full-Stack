@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap Demonstration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom fs-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/image/favicon.png" alt="Logo" width="30" height="30" class="rounded me-2">
+                <span class="text-white">Portfolio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header header-bootstrap text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bolder mb-3"><i class="fab fa-bootstrap me-3"></i>Bootstrap Toolkit</h1>
+            <p class="lead mb-0 mx-auto opacity-75" style="max-width: 800px;">A powerful front-end framework that
+                accelerates the development of professional, responsive, and mobile-first websites. It provides a robust
+                toolkit of pre-built components and a sophisticated Grid System that handles complex layouts with
+                minimal custom code.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 pb-5">
+        <section id="navbar-demo" class="mb-5 demo-box">
+            <h2 class="section-title">Navigation Bars</h2>
+            <p class="text-muted mb-4">Bootstrap makes creating responsive navbars simple. This uses built-in dark
+                utility classes.</p>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-3 shadow-sm mb-3">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold" href="#"><i class="fas fa-layer-group me-2"></i>Brand</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#demoNavbar"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="demoNavbar">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <pre><code class="language-html">&lt;nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded-3"&gt; ... &lt;/nav&gt;</code></pre>
+        </section>
+
+        <section id="card-demo" class="mb-5 demo-box">
+            <h2 class="section-title">Component: Cards</h2>
+            <p class="text-muted mb-4">Cards are flexible containers for content. They include options for headers,
+                footers, images, and contextual colors.</p>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
+                        <div class="card-header bg-primary text-white fw-bold py-3 border-0">Standard Card</div>
+                        <div class="card-body bg-light">
+                            <h5 class="card-title fw-bold">Card Title</h5>
+                            <p class="card-text text-muted">This is a standard card built using native Bootstrap
+                                classes. Notice the rounded edges and shadow utilities applied.</p>
+                            <a href="#" class="btn btn-outline-primary rounded-pill px-4">Action</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card border-success shadow-sm rounded-4 overflow-hidden mb-3">
+                        <div class="card-header bg-success text-white fw-bold py-3 border-0">Styled Card</div>
+                        <div class="card-body text-success bg-white">
+                            <h5 class="card-title fw-bold">Success Card</h5>
+                            <p class="card-text">This card uses contextual border and background color utility classes
+                                (<code style="color: #d63384;">border-success</code>, <code style="color: #d63384;">bg-success</code>) for emphasis.</p>
+                        </div>
+                    </div>
+                    <div class="p-4 rounded-1 font-monospace" style="background-color: #333333; color: #e6e6e6; font-size: 0.95rem;">
+                        &lt;<span style="color: #ff7b72;">div</span> <span style="color: #ff7b72;">class</span>="<span style="color: #7ee787;">card</span>"&gt;...&lt;/<span style="color: #ff7b72;">div</span>&gt;
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="button-demo" class="demo-box">
+            <h2 class="section-title">Button Utilities & Colors</h2>
+            <p class="text-muted mb-4">Bootstrap provides several contextual button styles to indicate different states
+                or actions natively.</p>
+            <div class="bg-light p-4 border rounded-3 d-flex flex-wrap gap-2 justify-content-center">
+                <button type="button" class="btn btn-primary rounded-pill px-4 shadow-sm">Primary</button>
+                <button type="button" class="btn btn-secondary rounded-pill px-4 shadow-sm">Secondary</button>
+                <button type="button" class="btn btn-success rounded-pill px-4 shadow-sm">Success</button>
+                <button type="button" class="btn btn-danger rounded-pill px-4 shadow-sm">Danger</button>
+                <button type="button" class="btn btn-warning rounded-pill px-4 shadow-sm">Warning</button>
+                <button type="button" class="btn btn-info rounded-pill px-4 shadow-sm text-white">Info</button>
+                <button type="button" class="btn btn-dark rounded-pill px-4 shadow-sm">Dark</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-custom pt-5 pb-3">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            © 2026 Copyright: Udip Rawal
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

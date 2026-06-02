@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+   GLOBAL STYLES & DESIGN TOKENS
+   ========================================= */
+:root {
+    /* Colors */
+    --bg-primary: #fafafa;
+    --bg-secondary: #ffffff;
+    --text-primary: #171717;
+    --text-secondary: #525252;
+    --text-tertiary: #a3a3a3;
+    
+    /* Elegant Accent (Muted Slate / Indigo) */
+    --accent-color: #4f46e5;
+    --accent-hover: #4338ca;
+    --accent-light: #e0e7ff;
+
+    /* Subtle Border and Shadows */
+    --border-color: rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -2px rgba(0, 0, 0, 0.02);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.03), 0 4px 6px -4px rgba(0, 0, 0, 0.03);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    
+    /* Radii */
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    color: var(--text-primary);
+}
+
+.text-accent {
+    color: var(--accent-color) !important;
+}
+
+.text-muted {
+    color: var(--text-secondary) !important;
+}
+
+/* =========================================
+   NAVIGATION BAR (Glassmorphism)
+   ========================================= */
+.navbar-custom {
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: 18px 0;
+    transition: var(--transition-smooth);
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--text-primary);
+}
+
+.navbar-custom .navbar-brand span {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.navbar-custom .nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 16px;
+    margin: 0 4px;
+    border-radius: var(--radius-md);
+    transition: var(--transition-smooth);
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+}
+
+.navbar-toggler {
+    border: none;
+    color: var(--text-primary);
+}
+
+/* Hamburger icon override for light navbar */
+.navbar-dark .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* =========================================
+   PAGE HEADERS (Clean & Minimal)
+   ========================================= */
+.hero-section {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    padding: 140px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60vw;
+    height: 60vw;
+    background: radial-gradient(circle, var(--accent-light) 0%, transparent 70%);
+    opacity: 0.4;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.hero-section .display-3 {
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    color: var(--text-primary);
+}
+
+.hero-section h2 {
+    color: var(--text-secondary) !important;
+    font-weight: 400;
+}
+
+.hero-section p {
+    color: var(--text-secondary);
+}
+
+.page-header {
+    margin-top: 80px;
+    padding: 80px 0;
+    background: var(--bg-primary);
+    position: relative;
+    border-bottom: none;
+}
+
+.page-header h1 {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+.page-header p {
+    color: var(--text-secondary) !important;
+}
+
+/* Remove colored gradients from headers */
+.header-fullstack, .header-html, .header-css, .header-js, .header-bootstrap {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+/* Make fontawesome icons in headers use text-primary or accent */
+.page-header i {
+    color: var(--accent-color) !important;
+}
+
+/* =========================================
+   CARDS (Soft & Premium)
+   ========================================= */
+.card-custom, .fs-card, .demo-card, .demo-box {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    background: var(--bg-secondary);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-smooth);
+    padding: 30px;
+}
+
+.card-custom:hover, .fs-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Specific styling for the index page cards */
+.card-custom .card-title {
+    font-size: 1.25rem;
+    margin-top: 15px;
+}
+.card-custom .text-muted {
+    font-size: 0.95rem;
+}
+.card-custom i {
+    color: var(--text-primary) !important;
+    transition: var(--transition-smooth);
+}
+.card-custom:hover i {
+    color: var(--accent-color) !important;
+}
+
+/* Demo Cards Headers */
+.demo-card .card-header {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    font-weight: 600;
+    padding: 20px 0 15px 0 !important;
+}
+.demo-card .card-body {
+    background: transparent !important;
+}
+.demo-card .card-footer {
+    background: var(--bg-primary) !important;
+    border-top: 1px solid var(--border-color);
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl) !important;
+}
+
+/* Remove side borders on full stack cards */
+.border-frontend, .border-backend, .border-db, .border-api {
+    border-left: 1px solid var(--border-color) !important;
+}
+
+/* Minimalist Icon Boxes */
+.icon-box {
+    width: 48px;
+    height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    background-color: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+    margin-right: 15px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.fs-card:hover .icon-box {
+    background-color: var(--accent-color) !important;
+    color: white !important;
+}
+
+.list-group-item {
+    background: transparent;
+    color: var(--text-secondary);
+    border-color: var(--border-color);
+    padding: 12px 0;
+}
+.list-group-item i {
+    color: var(--text-tertiary) !important;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.btn-custom, .btn-custom-add {
+    background-color: var(--text-primary);
+    color: var(--bg-secondary);
+    border: 1px solid transparent;
+    border-radius: 100px; /* Pill shape is okay for CTA, or use --radius-md */
+    padding: 12px 28px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-custom:hover, .btn-custom-add:hover {
+    background-color: var(--text-secondary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Form Controls */
+.form-control {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    transition: var(--transition-smooth);
+}
+.form-control:focus {
+    background-color: var(--bg-secondary);
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* =========================================
+   DEMO CONTAINERS (CSS Page)
+   ========================================= */
+.demo-container {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+}
+
+/* Grid & Flex Demos - layout and colors */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+    gap: 10px;
+}
+.grid-item {
+    background-color: var(--bg-secondary);
+    color: white;
+    border: none;
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+}
+.grid-header { background-color: #707780; grid-area: header; }
+.grid-sidebar { background-color: #ff841a; grid-area: sidebar; }
+.grid-main { background-color: #1e8c4e; grid-area: main; }
+.grid-footer { background-color: #7543c4; grid-area: footer; }
+
+.flex-container { 
+    display: flex;
+    gap: 15px;
+    background: transparent; 
+    padding: 0; 
+}
+.flex-item {
+    flex: 1;
+    background-color: #12c2e9;
+    color: white;
+    border-radius: 6px;
+    padding: 1.5rem;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+}
+
+.transition-box {
+    width: 160px;
+    height: 100px;
+    background-color: #0d6efd;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.4s ease-in-out;
+    border: none;
+    box-shadow: none;
+}
+.transition-box:hover {
+    background-color: #0b5ed7;
+    transform: scale(1.1) rotate(5deg);
+    cursor: pointer;
+    box-shadow: 0px 15px 25px rgba(13, 110, 253, 0.4);
+}
+.animation-box {
+    width: 100px;
+    height: 100px;
+    background: #dc3545;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+    border: none;
+    box-shadow: none;
+}
+@keyframes pulse {
+    0% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+    50% { transform: scale(1); opacity: 1; box-shadow: 0 0 20px 10px rgba(220, 53, 69, 0); }
+    100% { transform: scale(0.9); opacity: 0.8; box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+}
+
+/* =========================================
+   TODO APP (JS Page)
+   ========================================= */
+.input-group {
+    background: var(--bg-primary);
+    border-radius: 100px;
+    padding: 4px;
+    border: 1px solid var(--border-color);
+}
+.input-group .form-control {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+#taskList .list-group-item {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md) !important;
+    margin-bottom: 8px;
+    padding: 16px 20px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid transparent;
+    transition: var(--transition-smooth);
+}
+#taskList .list-group-item:hover {
+    border-left-color: var(--accent-color);
+    transform: translateX(4px);
+}
+#taskList .list-group-item-success {
+    background-color: var(--bg-primary) !important;
+    border-left-color: var(--border-color) !important;
+    opacity: 0.5;
+}
+
+/* =========================================
+   BOOTSTRAP PAGE SPECIFIC
+   ========================================= */
+.section-title {
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+.section-title::after {
+    display: none; /* Remove red underline for a cleaner look */
+}
+/* Subtly override the demo bootstrap classes within .demo-box */
+.demo-box .bg-dark { background-color: var(--text-primary) !important; }
+.demo-box .bg-primary { background-color: var(--text-secondary) !important; }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer-custom {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    margin-top: 80px;
+}
+.footer-custom .text-white {
+    color: var(--text-primary) !important;
+}
+.footer-custom hr {
+    background-color: var(--border-color);
+    opacity: 1;
+}
+.footer-custom a, .footer-custom .text-light {
+    color: var(--text-secondary) !important;
+    transition: var(--transition-smooth);
+}
+.footer-custom a:hover {
+    color: var(--text-primary) !important;
+}
+.footer-custom .fa-facebook-f, .footer-custom .fa-twitter, .footer-custom .fa-linkedin-in, .footer-custom .fa-github {
+    color: var(--text-tertiary);
+}
+.footer-custom a:hover i {
+    color: var(--text-primary);
+}
+/* Copyright bar */
+.footer-custom > div:last-child {
+    background-color: var(--bg-primary) !important;
+    color: var(--text-tertiary);
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}

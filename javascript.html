@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Demonstration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom fs-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/image/favicon.png" alt="Logo" width="30" height="30" class="rounded me-2">
+                <span class="text-white">Portfolio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+                    <li class="nav-item"><a class="nav-link" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header header-js text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bolder mb-3"><i class="fab fa-js-square me-3"></i>Interactive Web Apps</h1>
+            <p class="lead mb-0 mx-auto opacity-75" style="max-width: 800px;">The programming language of interactivity
+                that breathes life into a static webpage. My skills are focused on client-side capabilities to create
+                dynamic user experiences through proficient DOM manipulation and sophisticated event handling.</p>
+        </div>
+    </header>
+
+    <main class="container my-5 pb-5">
+        <section id="todo-app">
+            <div class="card demo-card js-theme">
+                <div class="card-header py-3 fs-4"><i class="fas fa-list-check me-2"></i> Live Demo: Task Manager</div>
+                <div class="card-body p-5 bg-white">
+                    <p class="text-muted mb-4 fs-5">A powerful demonstration of DOM manipulation. Add tasks to the list.
+                        Click a task to mark it as complete. Double-click a task to remove it.</p>
+                    <div class="row g-5">
+                        <div class="col-lg-6">
+                            <div class="input-group input-group-lg mb-4 shadow-sm rounded-3 overflow-hidden">
+                                <input type="text" id="taskInput" class="form-control js-form-control border-0 bg-light"
+                                    placeholder="What needs to be done?">
+                                <button class="btn btn-custom-add px-4" type="button" id="addTaskBtn"><i
+                                        class="fas fa-plus"></i> Add</button>
+                            </div>
+                            <ul id="taskList" class="list-group"></ul>
+                        </div>
+                        <div class="col-lg-6 border-start d-none d-lg-block ps-5">
+                            <h4 class="fw-bold mb-4">How it Works:</h4>
+                            <ul class="list-unstyled lh-lg text-muted">
+                                <li class="mb-3"><i class="fas fa-arrow-right text-warning me-2"></i><strong>Event
+                                        Listener:</strong> The button listens for a 'click'.</li>
+                                <li class="mb-3"><i class="fas fa-arrow-right text-warning me-2"></i><strong>DOM
+                                        Selection:</strong> Targeting the input field and list natively.</li>
+                                <li class="mb-3"><i class="fas fa-arrow-right text-warning me-2"></i><strong>DOM
+                                        Creation:</strong> Generating `li` elements in memory.</li>
+                                <li class="mb-3"><i class="fas fa-arrow-right text-warning me-2"></i><strong>DOM
+                                        Manipulation:</strong> Appending elements to render visibly.</li>
+                                <li class="mb-3"><i class="fas fa-arrow-right text-warning me-2"></i><strong>Event
+                                        Delegation:</strong> Handling clicks dynamically on parent lists.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer bg-light border-top p-4">
+                    <pre class="rounded mb-0"><code class="language-javascript">// --- JavaScript Logic ---
+const taskInput = document.getElementById('taskInput');
+const addTaskBtn = document.getElementById('addTaskBtn');
+const taskList = document.getElementById('taskList');
+
+addTaskBtn.addEventListener('click', addTask);
+// Logic implemented below handles adds, clicks, and double-clicks...</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-custom pt-5 pb-3 mt-5">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            © 2026 Copyright: Udip Rawal
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="java.js"></script>
+</body>
+
+</html>

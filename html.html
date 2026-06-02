@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Demonstration</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="assets/image/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom fs-5">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-4 fw-bold d-flex align-items-center" href="index.html">
+                <img src="assets/image/favicon.png" alt="Logo" width="30" height="30" class="rounded me-2">
+                <span class="text-white">Portfolio</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fullstack.html">Full Stack</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="html.html">HTML</a></li>
+                    <li class="nav-item"><a class="nav-link" href="css.html">CSS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript.html">JavaScript</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bootstrap.html">Bootstrap</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header header-html text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bolder mb-3"><i class="fab fa-html5 me-3"></i>HTML Foundation</h1>
+            <p class="lead mb-0 mx-auto opacity-75" style="max-width: 800px;">HTML is the fundamental skeleton of every
+                webpage, providing the essential structure and meaning to its content. My approach emphasizes writing
+                clean, semantic HTML to improve accessibility for screen readers and enhance search engine optimization
+                (SEO).</p>
+        </div>
+    </header>
+
+    <main class="container my-5 pb-5">
+        <section id="input-types" class="mb-5">
+            <div class="card demo-card html-theme">
+                <div class="card-header py-3 fs-4"><i class="fas fa-keyboard me-2 text-accent"></i> Demonstration of
+                    Input Types</div>
+                <div class="card-body p-4 bg-white">
+                    <p class="text-muted mb-4">HTML5 introduced many new input types that provide better user
+                        experiences and mobile-friendly controls.</p>
+                    <form class="p-4 bg-light border rounded-3">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Text: <code>type="text"</code></label>
+                                <input type="text" class="form-control form-control-lg"
+                                    placeholder="Standard text input">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Password: <code>type="password"</code></label>
+                                <input type="password" class="form-control form-control-lg"
+                                    placeholder="Characters are masked">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Number: <code>type="number"</code></label>
+                                <input type="number" class="form-control form-control-lg" placeholder="123">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Email: <code>type="email"</code></label>
+                                <input type="email" class="form-control form-control-lg" placeholder="name@example.com">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Date: <code>type="date"</code></label>
+                                <input type="date" class="form-control form-control-lg">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-bold">Color: <code>type="color"</code></label>
+                                <input type="color" class="form-control form-control-color w-100" value="#e15f41">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="validation">
+            <div class="card demo-card html-theme">
+                <div class="card-header py-3 fs-4"><i class="fas fa-check-double me-2 text-accent"></i> Demonstration of
+                    Form Validation</div>
+                <div class="card-body p-4 bg-white">
+                    <p class="text-muted mb-4">HTML5 allows for client-side validation using attributes like
+                        <code>required</code>, <code>minlength</code>, <code>pattern</code>, and specific input types.
+                        Try submitting this form with invalid data.
+                    </p>
+                    <form class="p-4 bg-light border rounded-3" action="javascript:void(0);">
+                        <div class="mb-4">
+                            <label for="username" class="form-label fw-bold">Username (required, min 5 chars):</label>
+                            <input type="text" class="form-control form-control-lg" id="username" required
+                                minlength="5">
+                        </div>
+                        <div class="mb-4">
+                            <label for="useremail" class="form-label fw-bold">Email (must be a valid email):</label>
+                            <input type="email" class="form-control form-control-lg" id="useremail" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="postcode" class="form-label fw-bold">Postcode (e.g., AB1 2CD):</label>
+                            <input type="text" class="form-control form-control-lg" id="postcode" required
+                                pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][A-Za-z]{2}">
+                        </div>
+                        <button type="submit" class="btn btn-custom btn-lg w-100">Submit Form</button>
+                    </form>
+                </div>
+                <div class="card-footer bg-white border-top p-4">
+                    <p class="fw-bold mb-2">Here is the code used for the validation form above:</p>
+                    <pre class="rounded-3"><code class="language-html">&lt;form&gt;
+  &lt;!-- Required, min 5 characters --&gt;
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" required minlength="5"&gt;
+  
+  &lt;!-- Required, must be an email --&gt;
+  &lt;label for="useremail"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="useremail" required&gt;
+  
+  &lt;!-- Required, matches a specific pattern --&gt;
+  &lt;label for="postcode"&gt;Postcode:&lt;/label&gt;
+  &lt;input type="text" id="postcode" required pattern="[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][A-Za-z]{2}"&gt;
+  
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-custom pt-5 pb-3">
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.3)">
+            © 2026 Copyright: Udip Rawal
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
